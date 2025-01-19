@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open Tickets in new tab
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Open tickets in board in new tab when cliking of the ticket's name
 // @author       Amaury CRUNELLE
 // @match        https://jira.amadeus.com/agile/*
@@ -33,15 +33,6 @@
             }
         }, delay);
     };
-
-    const applyChangeScrolling = function(scrollContainerSelector, strSelector, fctChange, delay = 200, max = 5000) {
-        applyChange(scrollContainerSelector, (scrollContainer) => {
-            applyChange(strSelector, fctChange, delay, max);
-            scrollContainer.addEventListener('scroll', (_event) => {
-                applyChange(strSelector, fctChange, delay, max);
-            })
-        }, delay, max)
-    }
 
     const applyChangeScrollingAll = function(scrollContainerSelector, strSelector, fctChange, delay = 200, max = 5000) {
         applyChange(scrollContainerSelector, (scrollContainer) => {
