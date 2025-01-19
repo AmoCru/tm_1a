@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Open Tickets in new tab
+// @name         === Jira === / Open Tickets in new tab \
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Open tickets in board in new tab when cliking of the ticket's name
 // @author       Amaury CRUNELLE
 // @match        https://jira.amadeus.com/agile/*
